@@ -1,147 +1,114 @@
-/* styles.css */
-/* universal selector - Applies to whole document */
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+
+
+
+
 body{
-    background-image: url('plant2.jpg');
-	 background-repeat: no-repeat;
-    background-position: center;
-	 background-size: cover;
-	 min-height: 100vh;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 overflow: hidden;
-	   
-   }
- 
+   height: 100vh;
+   margin: 9;
+   padding: 0;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+   overflow: hidden;
+  
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+} 
 
-	   
-   .logo{
-   
-	   height:250px;
-	   width: 85%;
-	   position: absolute;
-	   top: 7%;
-	   left: 50%;
-	   transform: translate(-50%,-50%);
-   }
- 
-   .section1{
 
-	background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(2, 34, 7, 0.719));
+.logo{
+
     position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	min-height:100% ;
-	width: 100%;
-	backdrop-filter: blur(4px);
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: content;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	animation: colorChange 5s infinite;
-   }
-   @keyframes colorChange {
-		0%{
-			background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgb(2, 32, 6));
-		}
-		20%{
+    top: 15%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%,-50%);
 
-			background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgb(10, 44, 9));
-		}
-		40%{
-			background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgb(10, 43, 15));
-		}
-		60%{
-			background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgb(13, 58, 23));
-		}
-		80%{
-			background:linear-gradient(to bottom ,rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgba(94, 94, 94, 0),rgb(10, 80, 27));
-		}
-	
-   }
-
-.section1 #toggle{
-
-	position: absolute;
-	top:70px;
-	left: 90%;
-	transform: translate(-50%,-50%);
-	width: 60px;
-	height: 60px;
-	display: flex;
-	justify-content: center;
-		
 }
 
-.section1 footer{
-
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
-	background-color: rgba(27, 27, 27, 0.459);
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	box-shadow: 20px 20px 10px black;
-	display:flexbox;
-	justify-content: space-around;
-	animation: grow 5s;
-	
-}
-@keyframes grow {
-	from{
-
-		height: 0;
-	}
-}
-.section1 .fa-bars{
-
- font-size: 40px;
- color: rgb(255, 255, 255);
+@media screen and (min-width:480px){
+    .logo{
+        
+        width: 100%;
+        height: auto;
+        
+    }
 }
 
-
-.section1 footer button{
-
-	width: 120px;
-	height: 120px;
-	position: relative;
-	top: 15%;
-	left: 15%;
-	box-shadow: 5px 5px 10px black;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	border-style: solid;
-	border-color: green;
-	border-width: 2px;
-	background: transparent;
-	backdrop-filter: blur(10px);
+@media screen and (min-width:720px){
+    .logo{
+        
+        width: 60%;
+        top: 15%;
+        left: 50%;
+        height: auto;
+        transform: translate(-50%,-50%);
+       
+    }
+}
+@media screen and (min-width:1080px){
+    .logo{
+        
+        width: 40%;
+        left: 50%;
+        height: auto;
+        transform: translate(-50%,-50%);
+       
+    }
 }
 
-.section1 footer button a{
+nav{
 
-	align-self: center;
-	text-decoration: none;
-	color: white;
-	background: transparent;
-	font-size: 50px;
+    width:80%;
+    height: 50px;
+    border-style: solid;
+    box-shadow: 10px 10px 10px black;
+    backdrop-filter: blur(10px);
+    background: rgba(173, 173, 173, 0.082);
+    border-width: 1px;
+    position: fixed;
+    bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-color: white;
 }
 
-p{
-	color: white;
-	margin-top: 10px;
+@media screen and (min-width:400px){
+
+    nav{
+
+        width: 40%;
+    }
+
 }
+nav a {
 
-
+   
+    height: 80%;
+    width: 50px;
+    color: white;
+    text-decoration: none;
+   
+}
+.fa{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 50px;
+}
 
 
 
