@@ -1,40 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-    <title>spaceX2.0</title>
+    <title>SPACE X</title>
 </head>
 <body>
 
- 
-        <form class="form" id="form">
-			<i class="fa fa-times" onclick="hideForm()"></i>
-			<input type="text" placeholder="email">
-			<input type="password" placeholder="password">
-			<button>SIGN IN</button>
-		</form>
-            <img src="logo.png" alt="logo" class="logo">
+    <div class="logoContainer">
+    </div>
 
-                 <nav>
-                    <a href="#" class="fa fa-home"></a>
-                   
-                    <a href="#" class="fa fa-shopping-cart"></a>
-                
-                    <a href="#" class="fa fa-envelope"></a>
-                 </nav>
-     <script>
-           let form = document.getElementById('form');
+     
+    <div class="formWrap">
 
-		   function hideForm(){
-
-			form.style.display = " none";
-		   }
-	 </script>                   
-              
-            
+        <label >LOGIN TO ACCESS SERVICES</label>
+         <form action="#">
+            <input type="text" placeholder="email" name="email">
+            <input type="password" placeholder="password" name="password">
+            <button type="button">LOGIN</button>
+        <p>NO ACCOUNT REGISTER <a href="register.html">HERE</a></p>
+         </form>   
+    </div>
+    
 </body>
 </html>
