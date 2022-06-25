@@ -44,7 +44,7 @@ body{
     border: solid green 2px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%,-50%);
     box-shadow: 1px 3px 10px black ;
     display: flex;
@@ -53,7 +53,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     animation: slidin 5s 1;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(0px);
     gap: 5px;
     overflow: hidden;
 }
