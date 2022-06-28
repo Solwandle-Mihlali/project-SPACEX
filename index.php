@@ -2,15 +2,13 @@
  
  include('db_connection.php');
 
-
  if(isset($_POST['submitBtn'])){
      
-
     //variables 
      $email = $_POST['email'];
      $password= $_POST['pass'];
      //query to check if specific user exists 
-     $sql = "SELECT * FROM client_details WHERE
+     $sql = "SELECT client_email, client_password FROM client_details WHERE
      client_email ='$email' AND client_password = '$password'";
      //query execution 
      $result = mysqli_query($conn,$sql);
@@ -31,8 +29,8 @@
      }
      else{
 
-        echo 'user does not exist';
-        header('location: index.php');
+        header('location: productPage.html');
+       
 
      }
 

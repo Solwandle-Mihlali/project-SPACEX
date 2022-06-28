@@ -10,6 +10,7 @@ if(isset($_POST['regBtn'])){
     $email = $_POST['email'];
     $password= $_POST['pass'];
     $conf = $_POST['conf'];
+    $hash = md5($password);
     
 
     //injecting data into databse 
@@ -19,15 +20,22 @@ if(isset($_POST['regBtn'])){
        client_name = '$name',
        client_phone = '$Phone',
        client_email = '$email',
-       client_password = '$password';
+       client_password = '$hash'
     ";
     //query execution 
     $result = mysqli_query($conn,$sql);
     //checking for succesful execution of query 
     if($result == true ){
 
-       header('location: index.php');
+        if($password != $conf){
+
+            echo 'passwords do not match'
+            header('location: register.php');
+        }
+        else{
+        header('location: index.php');
        exit();
+        }
     }
     else{
 
