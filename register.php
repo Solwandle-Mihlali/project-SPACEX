@@ -1,67 +1,41 @@
-<?php
+<?php 
 
-    include('db_connection.php');
-    //declaring variables
-    $name = $name = $email = $pass =  $rpass = "";
+include('db_connection.php');
 
-    if(isset($_POST['regBtn']))
-    {
-        //storign data in declared varriables
-        $name = $_POST['name'];
-		$phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $pass = $_POST['password']; 
-        $rpass = $_POST['conf'];
-        
 
-        //password conditions
-        $pattern = '/^(?=.*[!@#$%^&*-?])(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{4,20}$/';
-		
-        $query = "SELECT * FROM client_details WHERE email = '$email'";
+if(isset($_POST['regBtn'])){
+
+    $name = $_POST['name'];
+    $Phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $password= $_POST['pass'];
+    $conf = $_POST['conf'];
     
-        $checkUserExsists = mysqli_query($conn,$query);
-        
-        if(empty($name) || empty($phone) || empty($email) || empty($pass) || empty($rpass))
-        {
-            echo "<br>Fields cannot be empty";
-        }
-        elseif(filter_var($email, FILTER_VALIDATE_EMAIL) != true)
-        {
-            echo "<br>Invliad Email address";
-        }
-        elseif(mysqli_num_rows($checkUserExsists) == 1)
-        {
-            echo "<br>User already exsists";
-        }
 
-        elseif($pass != $rpass)
-        {
-            echo "<br>Passwords do not match";
-        }
+    //injecting data into databse 
 
-		elseif(!preg_match($pattern, $pass))
-		{
-			echo  "<br>Password is not strong enough";
-		}
-        else
-        {
-			
-            $pass = md5($pass);
-            $query = "INSERT INTO client_details (client_name,client_phone, client_email, client_password) VALUES ('$name','$phone','$email','$pass')";
-            $insertUser = mysqli_query($conn,$query);
-            if ($insertUser == true) 
-            {
-                echo "<br>You have Sucessfully been Registered";
-            
-			}
-        }
-    
-    
+    $sql = "INSERT INTO client_details SET
+       
+       client_name = '$name',
+       client_phone = '$Phone',
+       client_email = '$email',
+       client_password = '$password';
+    ";
+    //query execution 
+    $result = mysqli_query($conn,$sql);
+    //checking for succesful execution of query 
+    if($result == true ){
+
+       header('location: index.php');
+       exit();
     }
-	
+    else{
+
+        echo "<br> data is not saved ";
+    }
+}
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,42 +47,20 @@
 </head>
 <body>
     <div class="formWrap" >
-        <div class="logoContainer" id="regLogo">
-        </div>
-         <form action="#" method="POST">
-            <input type="text" placeholder="Name..." name="name" required>
-            <input type="text" placeholder="Phone..." name="phone" required>
-            <input type="text" placeholder="Email..." name="email" required>
-            <input type="password" placeholder="Password..." name="password" required>
-            <input type="password" placeholder="Confirm..." name="conf" required>
-            <button type="submit" id="regBtn">REGISTER</button>
-        
-         </form>   
+        <section id="logoSection">
+        </section>
+        <section id="formSection">
+         <form action="#" method="post" id="form">
+            <input type="text" placeholder="Name..." name ="name">
+            <input type="text" placeholder="Phone..." name = "phone">
+            <input type="text" placeholder="Email..." name = "email">
+            <input type="password" placeholder="Password..." name = "pass">
+            <input type="password" placeholder="Confirm..." name = "conf">
+            <button type="submit" name="regBtn">SUBMIT</button>
+         </form>
+        </section>
+      
     </div>
-    
 
-    <style>
-        .formWrap{
-
-min-height: 75vh;
-width: 360px;
-border: solid green 2px;
-position: absolute;
-top: 50%;
-left: 20%;
-transform: translate(-50%,-50%);
-box-shadow: 1px 3px 10px black ;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-animation: slidin 5s 1;
-backdrop-filter: blur(0px);
-gap: 5px;
-overflow: hidden;
-}
-
-    </style>
 </body>
 </html>

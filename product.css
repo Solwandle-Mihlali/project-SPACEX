@@ -1,0 +1,159 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --spaceGreen: rgb(8, 90, 8);
+}
+
+body{
+    overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(255, 255, 255);
+}
+
+
+.productWrap{
+
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 3px 10px black ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.productWrap section{
+
+    width: 100%;
+    min-height: 32vh;
+     display: flex;
+}
+
+.productWrap #browniesSection .image{
+  
+    min-height:32vh ;
+    width: 50%;
+    background-image: url('brownie.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.productWrap #browniesSection .desc{
+    
+    height:32vh ;
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; 
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+  
+}
+.productWrap #browniesSection .desc button{
+  
+    height: 5vh;
+    width: 45%;
+    border: solid green 0.5px ;
+    box-shadow: 1px 1px 10px black;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+
+  
+}
+
+
+
+.productWrap #weedSection .image{
+
+   
+    min-height:32vh ;
+    width: 50%;
+    background-image: url('brownie2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.productWrap #weedSection .desc{
+  
+    height:32vh ;
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; 
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+  
+}
+.productWrap #weedSection .desc button{
+  
+    height: 5vh;
+    width: 45%;
+    border: solid green 0.5px ;
+    box-shadow: 1px 1px 10px black;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+
+  
+}
+
+
+.productWrap #preRolledSection .image{
+    
+    min-height:32vh ;
+    width: 50%;
+    background-image: url('brownie3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.productWrap #preRolledSection .desc{
+  
+    height:32vh ;
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; 
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+  
+}
+.productWrap #preRolledSection .desc button{
+  
+    height: 5vh;
+    width: 45%;
+    border: solid green 0.5px ;
+    box-shadow: 1px 1px 10px black;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+
+  
+}

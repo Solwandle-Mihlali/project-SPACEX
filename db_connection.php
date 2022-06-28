@@ -1,38 +1,20 @@
 <?php
-$con = mysqli_connect('localhost','root','');
-$dbname="spacex";
 
-# Check connection
+session_start();
 
-	if (!$con) {
-		
-			die("Connection failed: " . mysqli_connect_error());
-		 	
-		}
-		
-		echo "<br>Connected successfully<br>";
+//defining constants 
 
+define('LOCALHOST','localhost');
+define('ROOT','root');
+define('PASSWORD','');
+define('DATABASE','spacex');
+define('URL','http://localhost/spacex/project-SPACEX/');
 
-	$selectDB = mysqli_select_db($con,$dbname);
-	
+//connecting DB
+$conn = mysqli_connect(LOCALHOST, ROOT, PASSWORD, DATABASE) or 
+die(mysqli_error('FAILED TO CANECT TO DATABSE'));
 
-		if (!$selectDB) {
-
-		$sql = "CREATE DATABASE ".$dbname."";
-		
-		mysqli_query($con, $sql); 
-		
-		
-		echo "<br>Database ".$dbname." succesfully created<br>";
-
-		} else {
-			
-		   echo "<br>Database ".$dbname." already exsist<br>";
-			
-		}
-	
-	# new connection with database name specified
-	
-    $conn = mysqli_connect('localhost','root','',$dbname);
+$db_select = mysqli_select_db($conn, DATABASE) 
+or die(mysqli_error('DATABSE DOES NOT EXIST'));
 
 ?>
