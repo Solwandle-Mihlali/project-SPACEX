@@ -29,7 +29,7 @@ if(isset($_POST['regBtn'])){
 
         if($password != $conf){
 
-            echo 'passwords do not match'
+            echo 'passwords do not match';
             header('location: register.php');
         }
         else{

@@ -59,7 +59,6 @@ body{
 }
 
 .formWrap #formSection form{
-
     height: 100%;
     width: 100%;
     position: relative;
@@ -69,8 +68,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    
+    justify-content: space-evenly;  
 }
 
 .formWrap #formSection #form input{
@@ -103,29 +101,6 @@ body{
     font-weight: bold;
     background:transparent;
 }
-
-
-@media screen and (min-width:720px) {
-
-    .formWrap{
-
-        width: 100%;
-    }
-    
-    .formWrap #formSection form button{
-
-        width: 20%;
-        height: 35px;
-    
-    }
-    .formWrap #formSection{
-
-        height: 60vh;
-        border: solid;
-    }
-    
-}
-
 
 /* login form styling */
 
@@ -188,18 +163,6 @@ body{
 }
 
 
-.formWrap #formSection form input{
-
-  
-    width: 60%;
-    height: 200px;
-    color: black;
-    transform: none;
-    border-top-style: none;
-    border-left-style: none;
-    border-right-style: none;
-}
-
 .loginFormWrap #formSection form input::placeholder{
   
     color: green;
@@ -245,3 +208,47 @@ color: red;
     z-index: -1;
     bottom: 0;
 }
+
+@media  screen and (min-width:480px) {  
+    .loginFormWrap{
+
+        width: 70%;
+        transition: ease-in-out;
+    } 
+    
+    .formWrap{
+
+        width: 70%;
+        transition: ease-in-out;
+    }
+}
+
+
+@media  screen and (min-width:600px) {
+    
+    .loginFormWrap{
+
+        width: 60%;
+        transition: ease-in-out;
+    }
+    .formWrap{
+
+        width: 60%;
+        transition: ease-in-out;
+    }
+}
+
+@media  screen and (min-width:800px) {
+    
+    .loginFormWrap{
+
+        width: 40%;
+        transition: ease-in-out;
+    }
+    .formWrap{
+
+        width: 40%;
+        transition: ease-in-out;
+    }
+}
+
