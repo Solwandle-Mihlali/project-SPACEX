@@ -11,149 +11,176 @@
 }
 
 body{
-    overflow: hidden;
+     overflow: hidden;
      display: flex;
+     flex-direction: column;
      align-items: center;
      justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background: rgb(255, 255, 255);
+     min-height: 100vh;
+     width: 100%;
+     background: rgb(255, 255, 255);
 }
 
 
 .productWrap{
-
-    min-height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    height: 80vh;
+    width: 60%;
     box-shadow: 1px 3px 10px black ;
     display: flex;
-    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+}
+
+.productWrap .right {
+
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 
 .productWrap section{
 
     width: 100%;
-    min-height: 32vh;
-     display: flex;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productWrap .right #productInfo{
+
+    border: solid rgb(6, 75, 11) 2px ;
+    width: 80%;
+    box-shadow:3px 4px 10px rgb(4, 54, 8);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    animation: border 5s infinite;
+    padding: 10px;
+   
 }
 
-.productWrap #browniesSection .image{
+@keyframes border {
+
+    from{
+
+        border-color: orange;
+    }
+    10%{
+        border-color: rgb(19, 22, 190);;
+    }
+    20%{
+        border-color: red;
+    }
+    30%{
+        border-color: blueviolet;
+    }
+    
+}
+
+.productWrap .right #productInfo h1{
+
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 0;
+}
+
+.productWrap .right #productInfo p{
+
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: lighter;
+   font-size: 14px;
+   flex-wrap: wrap;
+}
+
+.productWrap .right button{
+
+    width: 60%;
+    height: 10%;
+    background: white;
+    color: green;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid green 2px;
+    border-radius: 10px;
+    box-shadow: 6px 4px 10px black;
+
+}
+.productWrap .right button a{
+
+    text-decoration: none;
+    color: green;
+
   
-    min-height:32vh ;
-    width: 50%;
+
+}
+
+.productWrap .price h1 {
+  
+    color: rgb(29, 134, 29);
+    font-size: 60px;
+    text-shadow: 4px 3px 10px black;
+}
+
+.productWrap .leftBg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 30vw;
+    position: relative;
+    left: 0;
+    background: linear-gradient(to bottom right, rgb(0, 153, 13),rgb(11, 87, 27), rgb(2, 97, 2));
+    flex-wrap: wrap;
+}
+
+.productWrap .leftBg .image{
+   
+    height: 80%;
+    width: 80%;
     background-image: url('brownie.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
+    top: 10%;
+    left: 0;
+    z-index: 1;
+    flex-wrap: wrap;
 }
-.productWrap #browniesSection .desc{
-    
-    height:32vh ;
-    width: 50%;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px; 
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: green;
-  
-}
-.productWrap #browniesSection .desc button{
-  
-    height: 5vh;
-    width: 45%;
-    border: solid green 0.5px ;
-    box-shadow: 1px 1px 10px black;
-    background: transparent;
-    font-size: 12px;
-    font-weight: bold;
-
-  
-}
-
-
-
-.productWrap #weedSection .image{
-
+.productWrap .leftBg .logo{
    
-    min-height:32vh ;
-    width: 50%;
-    background-image: url('brownie2.png');
+    height: 40%;
+    width: 120%;
+    background-image: url('logo.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: -10%;
 }
-.productWrap #weedSection .desc{
-  
-    height:32vh ;
-    width: 50%;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px; 
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: green;
-  
-}
-.productWrap #weedSection .desc button{
-  
-    height: 5vh;
-    width: 45%;
-    border: solid green 0.5px ;
-    box-shadow: 1px 1px 10px black;
-    background: transparent;
-    font-size: 12px;
-    font-weight: bold;
 
-  
+.productWrap .leftBg p{
+   
+color: white;
+position: absolute;
+bottom: 10px;
+left: 25%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 12px;
+font-weight: lighter;
+text-shadow: 4px 5px 10px black;
 }
 
 
-.productWrap #preRolledSection .image{
-    
-    min-height:32vh ;
-    width: 50%;
-    background-image: url('brownie3.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.productWrap #preRolledSection .desc{
-  
-    height:32vh ;
-    width: 50%;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px; 
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: green;
-  
-}
-.productWrap #preRolledSection .desc button{
-  
-    height: 5vh;
-    width: 45%;
-    border: solid green 0.5px ;
-    box-shadow: 1px 1px 10px black;
-    background: transparent;
-    font-size: 12px;
-    font-weight: bold;
-
-  
-}
