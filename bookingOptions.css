@@ -15,22 +15,29 @@ body{
 }
 
 .wrapper{
-    min-height: 100vh;
-    width: 100%;
-    border: solid green;
+    min-height: 50vh;
+    width:30%;
+    position: relative;
+    border: solid green 1px;
+    box-shadow: 5px 4px 10px black ;
 
 }
 
 .wrapper section{
 
     min-height:30vh;
-    border:solid red 1px ;
+    border:solid rgb(252, 252, 252) 1px ;
     width: 100%;
 }
 
 .wrapper #top{
 
     min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-style: none;
 }
 .wrapper #bottom{
 
