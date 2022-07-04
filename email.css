@@ -1,0 +1,41 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     width: 100%;
+}
+
+.formWrap{
+    
+    position: relative;
+    min-height: 90vh;
+    width: 50%;
+    border: solid red 1px ;
+    display: flex;
+    flex-direction:column;
+    align-items: center;justify-content: center;
+}
+
+.formWrap form{
+
+    min-height: 90% ;
+    width: 60%;
+    border: solid;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
