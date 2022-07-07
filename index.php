@@ -30,16 +30,9 @@
      else{
 
         header('location: productPage.html');
-       
-
      }
  }
- 
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,12 +53,11 @@
         <section id="formSection">
          <form action="#" method="post">
             <input type="text" placeholder="Email..." name = "phone">
-            <input type="text" placeholder="Password..." name = "pass">
+            <input type="password" placeholder="Password..." name = "pass">
             <button type="submit" name="submitBtn">SUBMIT</button>
             <h3>NO ACCOUNT: <a href="register.php">REGISTER HERE</a></h3>
          </form>
         </section>
     </div>
-    
 </body>
 </html>
